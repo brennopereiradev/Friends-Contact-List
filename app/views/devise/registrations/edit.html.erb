@@ -1,0 +1,58 @@
+<div class="bg-dark bg-opacity-75 text-white p-2 rounded-top">
+  <div class="row d-flex align-items-center">
+    <div class="col">
+      <strong><i class="far fa-id-card"></i> Edit <%= resource_name.to_s.humanize %></strong>
+    </div>
+  </div>
+</div>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="d-flex flex-row mt-3">
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1"><i class="far fa-envelope"></i></span>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Email", class:"form-control" %>
+    </div>
+  </div>
+  <div class="bg-dark bg-opacity-75 text-white p-2 rounded-top mb-3">
+    <div class="row d-flex align-items-center">
+      <div class="col">
+        <strong><i class="far fa-id-card"></i> Change Password</strong>
+      </div>
+    </div>
+  </div>
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    Currently waiting confirmation for: <%= resource.unconfirmed_email %>
+  <% end %>
+  <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user-lock"></i></span>
+    <%= f.password_field :current_password, autocomplete: "current-password", placeholder:"Current password", class:"form-control" %>
+  </div>
+  <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder:"New password", class:"form-control" %>
+  </div>
+  <% if @minimum_password_length %>
+    <em><%= @minimum_password_length %> characters minimum</em>
+  <% end %>
+  <%= f.label :password_confirmation %><br />
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"Password confirmation", class:"form-control"  %>
+  </div>
+  <div class="text-end">
+    <%= f.submit "Update", class:"btn btn-success btn-sm" %>
+  </div>
+<% end %>
+<div class="card mt-3">
+  <div class="card-header bg-danger text-white">
+    Cancel my account?
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Unhappy?</h5>
+    <div class="text-end">
+      <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"btn btn-sm btn-danger" %>
+    </div>
+  </div>
+</div>

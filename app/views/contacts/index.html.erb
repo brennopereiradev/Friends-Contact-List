@@ -1,0 +1,57 @@
+<% if user_signed_in? %>
+
+<div class="bg-dark bg-opacity-75 text-white p-2 rounded-top">
+  <div class="row d-flex align-items-center">
+    <div class="col">
+      <strong><i class="far fa-id-card"></i> Contacts</strong>
+    </div>
+    <div class="col-2 text-end">
+      <%= link_to new_contact_path, class:"btn btn-sm btn-outline-light" do %>
+        <i class="far fa-plus-square"></i> New Contact
+      <% end %>
+    </div>
+  </div>
+</div>
+<div id="contacts">
+  <div class="bg-dark bg-opacity-50 text-white">
+    <div class="row pt-2 ps-2 pb-2">
+      <div class="col"><i class="far fa-user"></i> Name</div>
+      <div class="col"><i class="far fa-envelope"></i> Email</div>
+      <div class="col"><i class="fab fa-instagram"></i> Instagram</div>
+      <div class="col-2"></div>
+    </div>
+  </div>
+  <% @contacts.each do |contact| %>
+    <% if contact.user == current_user %>
+      <div id="<%= dom_id contact %>">
+        <div class="border border-secondary">
+          <div class="row  pt-2 ps-2 pb-2">
+            <div class="col">
+             <%= link_to contact.first_name + ' ' +  contact.last_name, contact %>
+            </div>
+            <div class="col">
+              <%= contact.email %>
+            </div>
+            <div class="col">
+              <%= contact.instagram %>
+            </div>
+            <div class="col-2 d-flex justify-content-end align-items-center">
+              <%= link_to edit_contact_path(contact), class:"btn btn-sm btn-primary me-1", alt:"Edit", title:"Edit" do %>
+                <i class="fas fa-edit"></i>
+              <% end %>
+              <%= button_to contact, method: :delete, form: { data: { turbo_confirm: "Are you sure?" } }, class:"btn btn-sm btn-danger me-1", alt:"Delete", title:"Delete" do %>
+                <i class="far fa-times-circle"></i>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<% else %>
+
+You dont have any contact list yet
+
+<% end %>

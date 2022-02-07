@@ -1,0 +1,36 @@
+a, input:focus, .form-control:focus, button{
+    outline: 0 !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    width:300px;
+    height: 320px;
+    margin-top:50px;
+    padding:1em;
+    border-radius: 5px;
+    background: #ccc;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, .3);
+}
+
+.box input[type=email], .box input[type=password]{
+    margin-top: 1em;
+    border-radius: 5px;
+    border:none;
+    padding: 10px;
+    outline: none;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, .3);
+    width:100%;
+}
+
+.box input[type=checkbox], .box label{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.box label{
+    margin-left: 10px;
+}

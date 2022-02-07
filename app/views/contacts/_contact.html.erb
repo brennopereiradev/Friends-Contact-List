@@ -1,0 +1,21 @@
+<div class="bg-dark bg-opacity-75 text-white p-2 rounded-top">
+  <div class="row d-flex align-items-center">
+    <div class="col">
+      <strong><i class="far fa-id-card"></i> Contact: <%= contact.first_name + ' ' + contact.last_name %></strong>
+    </div>
+  </div>
+</div>
+<div id="<%= dom_id contact %>" class="bg-dark bg-opacity-10 p-2 rounded">
+  <div class="row d-flex align-items-center">
+    <div class="col-3 text-center">
+      <i class="far fa-user" style="font-size:100px"></i>
+      <h4></h4>
+    </div>
+    <div class="col">
+      <p><%= contact.email %></p>
+      <p><%= contact.phone %></p>
+      <p><%= contact.address %></p>
+      <p><%= contact.instagram %></p>
+    </div>
+  </div>
+</div>
