@@ -1,3 +1,3 @@
-# Contacts list with user login - Ruby on rails
+# Contacts list with user login - Ruby on
 
 * ...
