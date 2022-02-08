@@ -1,36 +1,56 @@
-a, input:focus, .form-control:focus, button{
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+a,
+input:focus,
+.form-control:focus,
+button {
     outline: 0 !important;
     text-decoration: none !important;
     box-shadow: none !important;
 }
 
-.box{
+.box {
     display: flex;
     flex-direction: column;
-    width:300px;
+    width: 300px;
     height: 320px;
-    margin-top:50px;
-    padding:1em;
+    margin-top: 50px;
+    padding: 1em;
     border-radius: 5px;
     background: #ccc;
     box-shadow: 1px 2px 1px rgba(0, 0, 0, .3);
 }
 
-.box input[type=email], .box input[type=password]{
+.box input[type=email],
+.box input[type=password] {
     margin-top: 1em;
     border-radius: 5px;
-    border:none;
+    border: none;
     padding: 10px;
     outline: none;
     box-shadow: 1px 2px 1px rgba(0, 0, 0, .3);
-    width:100%;
+    width: 100%;
 }
 
-.box input[type=checkbox], .box label{
+.box input[type=checkbox],
+.box label {
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-.box label{
+.box label {
     margin-left: 10px;
+}
+
+.front-pic-friends {
+    width: 100%;
+}
+
+.bigfont-title {
+    font-size: 2.2em;
+    font-family: 'Gravitas One', cursive;
+    width: 80%;
 }
