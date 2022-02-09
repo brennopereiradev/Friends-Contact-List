@@ -3,10 +3,10 @@
 <div class="bg-dark bg-opacity-75 text-white p-2 rounded-top">
   <div class="row d-flex align-items-center">
     <div class="col">
-      <strong><i class="far fa-id-card"></i> Contacts</strong>
+      <strong><i class="far fa-id-card"></i> <%= current_user.email  %> - Contacts</strong>
     </div>
     <div class="col-2 text-end">
-      <%= link_to new_contact_path, class:"btn btn-sm btn-outline-light" do %>
+      <%= link_to new_contact_path, class:"btn btn-outline-light" do %>
         <i class="far fa-plus-square"></i> New Contact
       <% end %>
     </div>
@@ -36,10 +36,10 @@
               <%= contact.instagram %>
             </div>
             <div class="col-2 d-flex justify-content-end align-items-center">
-              <%= link_to edit_contact_path(contact), class:"btn btn-sm btn-primary me-1", alt:"Edit", title:"Edit" do %>
+              <%= link_to edit_contact_path(contact), class:"btn btn-primary me-1", alt:"Edit", title:"Edit" do %>
                 <i class="fas fa-edit"></i>
               <% end %>
-              <%= button_to contact, method: :delete, form: { data: { turbo_confirm: "Are you sure?" } }, class:"btn btn-sm btn-danger me-1", alt:"Delete", title:"Delete" do %>
+              <%= button_to contact, method: :delete, form: { data: { turbo_confirm: "Are you sure?" } }, class:"btn btn-danger me-1", alt:"Delete", title:"Delete" do %>
                 <i class="far fa-times-circle"></i>
               <% end %>
             </div>
@@ -52,16 +52,19 @@
 
 <% else %>
 
-<div class="rounded-bottom border border-secondary text-center p-3">
-  <div class="row">
-    <div class="col-md-4">
-      <%= image_tag "_friends.png", class:"front-pic-friends" %>
-    </div>
-    <div class="col d-flex justify-content-start align-items-center flex-column">
-      <h5 class="bigfont-title mt-5 mb-3">Welcome to Your personal contacts info page</h5>
-      <h3 class="mt-3 mb-3">You have no contacts yet!</h3>
-      <p> Please <%= link_to "Login", new_user_session_path %> to insert Your data.</p>
-    </div>
+<div class="row">
+  <div class="col-md-4">
+    <%= image_tag "_friends.png", class:"front-pic-friends" %>
+  </div>
+  <div class="col d-flex justify-content-start align-items-center flex-column">
+    <h1 class="bigfont-title">Welcome to Your personal contacts info page</h1>
+    <hr>
+        <h5 class="mb-5">Thank You for using the personal contacts info page</h5>
+        <ul class="instructions">
+            <li>To start using the personal contact information page, you need to be registered or logged in (because your personal contacts belong only to you, right?)</li>
+            <li>So is very easy to register, just click on the button above in the right corner and register your name and email. Simple like that.</li>
+            <li>If You already registered your user just click on the button above on the right corner and log in with your user and password. Amazing easy peasy!</li>
+        </ul>
   </div>
 </div>
 

@@ -12,6 +12,14 @@ button {
     box-shadow: none !important;
 }
 
+
+/********************************/
+
+.cont-main {
+    height: 70vh;
+    background: linear-gradient(45deg, #eff7ef, #fff);
+}
+
 .box {
     display: flex;
     flex-direction: column;
@@ -50,7 +58,55 @@ button {
 }
 
 .bigfont-title {
-    font-size: 2.2em;
-    font-family: 'Gravitas One', cursive;
+    margin: 1em 0;
     width: 80%;
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Gravitas One', cursive;
+    transform: skewY(-1deg);
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    background: none;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.nav-link:hover {
+    background: #fff !important;
+    border-radius: 5px;
+    color: #000 !important;
+}
+
+.instructions {
+    width: 80%;
+    list-style: circle;
+}
+
+.instructions li {
+    margin-bottom: 1em;
+}
+
+.social {
+    color: #fff;
+    transition: all .5s ease-in-out;
+}
+
+.linkedin:hover {
+    color: #2867B2;
+    transform: rotate(360deg);
+}
+
+.github:hover {
+    color: #6cc644;
+    transform: rotate(360deg);
+}
+
+.gmail:hover {
+    color: #c71610;
+    transform: rotate(360deg);
 }
