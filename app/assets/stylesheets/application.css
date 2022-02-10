@@ -15,8 +15,20 @@ button {
 
 /********************************/
 
-.bg-orange {
+.bg-darkblue {
     background: #355070;
+}
+
+.bg-green {
+    background: #c7f9cc;
+}
+
+.bg-green2 {
+    background: #619b8a;
+}
+
+.text-darkblue {
+    color: #355070;
 }
 
 .cont-main {
@@ -24,16 +36,52 @@ button {
     background: linear-gradient(45deg, #eff7ef, #fff);
 }
 
+.box-icon {
+    background: #fff;
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .box {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: auto;
+    min-height: 330px;
     margin-top: 50px;
     padding: 1em;
     border-radius: 5px;
-    background: #eaac8b;
+    background: #c7f9cc;
     box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.box .btn-success {
+    background: #619b8a;
+    color: #355070;
+    border: none;
+}
+
+.box-register {
+    display: flex;
+    flex-direction: column;
+    min-height: 330px;
+    margin-top: 50px;
+    padding: 1em;
+    border-radius: 5px;
+    background: #fcca46;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.box-register ul {
+    min-height: 200px;
+}
+
+.box-register .btn-success {
+    background: #c7f9cc;
+    color: #355070;
+    border: none;
 }
 
 .box input[type="email"],
@@ -78,18 +126,17 @@ button {
     background: none;
 }
 
-.nav-link {
-    color: #fff !important;
+.navigation .nav-link {
+    color: #fff;
 }
 
-.nav-link:hover {
+.navigation .nav-link:hover {
     background: #fff !important;
     border-radius: 5px;
     color: #000 !important;
 }
 
 .instructions {
-    width: 80%;
     list-style: circle;
 }
 
@@ -115,4 +162,8 @@ button {
 .gmail:hover {
     color: #c71610;
     transform: rotate(360deg);
+}
+
+.register-link .nav-link {
+    color: #355070;
 }
