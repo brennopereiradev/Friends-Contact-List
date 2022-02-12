@@ -20,11 +20,11 @@ button {
 }
 
 .bg-green {
-    background: #c7f9cc;
+    background: #e1dfba;
 }
 
 .bg-green2 {
-    background: #619b8a;
+    background: #5454c5;
 }
 
 .text-darkblue {
@@ -32,45 +32,31 @@ button {
 }
 
 .cont-main {
-    min-height: 70vh;
+    min-height: 73vh;
     background: linear-gradient(45deg, #eff7ef, #fff);
-}
-
-.box-icon {
-    background: #fff;
-    border-radius: 100%;
-    width: 70px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .box {
     display: flex;
     flex-direction: column;
-    min-height: 330px;
-    margin-top: 50px;
-    padding: 1em;
+    min-height: 350px;
     border-radius: 5px;
-    background: #c7f9cc;
     box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
+    width:350px;
 }
 
 .box .btn-success {
-    background: #619b8a;
-    color: #355070;
+    background: #5454c5;
+    color: #fff;
     border: none;
 }
 
 .box-register {
     display: flex;
     flex-direction: column;
-    min-height: 330px;
-    margin-top: 50px;
-    padding: 1em;
+    min-height: 350px;
+    width:350px;
     border-radius: 5px;
-    background: #fcca46;
     box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -79,8 +65,8 @@ button {
 }
 
 .box-register .btn-success {
-    background: #c7f9cc;
-    color: #355070;
+    background: #e1dfba;
+    color: #fff;
     border: none;
 }
 
@@ -99,6 +85,10 @@ button {
 .box label {
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+.box input:focus{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .box label {
