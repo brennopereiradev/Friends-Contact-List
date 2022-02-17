@@ -1,6 +1,6 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="d-flex justify-content-center mt-5">
-    <div class="box p-3 me-3">
+    <div class="box me-5">
       <div class="bg-green2 bg-opacity-75 text-darkblue p-3 rounded-top">
         <div class="row d-flex align-items-center">
           <div class="col text-white">
@@ -10,21 +10,28 @@
       </div>
       <div class="instructions bg-light rounded-bottom p-3 mb-3">
         <%= render "devise/shared/error_messages", resource: resource %>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Email", required:"required" %>
-        <%= f.password_field :password, autocomplete: "current-password", placeholder:"Password", required:"required" %>
-        <% if devise_mapping.rememberable? %>
+        <div class="input-group mb-3">
+          <i class="fa-solid fa-envelope"></i>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Email", required:"required", class:"ps-5" %>
+        </div>
+        
+        <div class="input-group mb-3">
+          <i class="fa-solid fa-key"></i>
+          <%= f.password_field :password, autocomplete: "current-password", placeholder:"Password", required:"required", class:"ps-5" %>
+          <% if devise_mapping.rememberable? %>
           <div class="d-flex align-items-center">
             <%= f.check_box :remember_me %><%= f.label :remember_me %>
           </div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
-      <div class="text-end register-link">
+      <div class="text-end register-link p-3">
         <%= f.submit "Login", class:"btn btn-success btn-lg" %>
       <% end %>
       <%= render "devise/shared/links" %>
     </div>
   </div>
-  <div class="box-register p-3">
+  <div class="box-register">
     <div class="bg-green bg-opacity-75 text-darkblue p-3 rounded">
       <div class="row d-flex align-items-center">
         <div class="col">
@@ -33,10 +40,10 @@
       </div>
     </div>
     <ul class="instructions bg-light rounded-bottom mb-5">
-      <li class="mt-3 mb-3">If You don't have a login yet just click on the button bellow and register your user.</li>
-      <li class="mb-3">Is very fast and easy!</li>
+      <li class="mt-3 mb-3 p-3">If You don't have a login yet just click on the button bellow and register your user.</li>
+      <li class="mb-3 p-3">Is very fast and easy!</li>
     </ul>
-    <div class="text-end">
+    <div class="text-end p-3">
       <%= link_to "Register", new_user_registration_path, class:"btn btn-success btn-lg" %>
     </div>
   </div>
