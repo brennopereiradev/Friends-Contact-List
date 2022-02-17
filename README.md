@@ -8,4 +8,4 @@
 + Devise user login
 
 # Heroku address
-* https://contactsrails-app.herokuapp.com/
+* https://contacts-list-rails.herokuapp.com/
