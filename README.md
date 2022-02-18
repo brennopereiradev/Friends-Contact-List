@@ -1,11 +1,25 @@
-# Contacts list with user login - Ruby on rails - v1
-+ ruby 3.0.0
-+ Rails 7.0.1
-+ Node 16.13.2
+# My first attempt creating a Contacts list with user login using Ruby on rails
 
-# Gems
-+ Scaffold crud
-+ Devise user login
+1 - Backend, Tecs and versions
+
++ ruby 3.0.0
++ Node 16.13.2
++ Sqlite3
+
+2 - Frameworks
+
+* Bootstrap (CSS3)
+* Rails
+
+3 - Gems
+
++ Scaffold crud (Create, read, update and delete contacts)
++ Devise user login (One user to their distinct many friends)
 
 # Heroku address
-* https://contacts-list-rails.herokuapp.com/
+
+https://contacts-list-rails.herokuapp.com/
+
+# Contact
+
+brennopereiradev@gmail.com
