@@ -18,7 +18,7 @@
 
 ### Heroku address
 
-<a href="https://contacts-list-rails.herokuapp.com/"target="_blank">contacts-list-rails.herokuapp.com</a>
++ <a href="https://contacts-list-rails.herokuapp.com/" target="_blank">contacts-list-rails.herokuapp.com</a>
 
 ### Contact
 
